@@ -24,11 +24,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      # npm check
-      - name: npm_process
-        run: |
-          npm audit fix
-
       # Runs a single command using the runners shell
       - name: JSDoc Action
         uses: andstor/jsdoc-action@v1.2.1
