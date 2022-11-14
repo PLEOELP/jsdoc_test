@@ -29,6 +29,6 @@ jobs:
         uses: andstor/jsdoc-action@v1.2.1
         with:
           source_dir: ./assets/scripts
-          recurse: true
+          # recurse: true
           output_dir: ./assets/doc
-          template: minami
+
