@@ -29,6 +29,7 @@ jobs:
     # Runs commands using the runners shell
     - name: Run the build php script
       run: |
+        mkdir build
         cd build
         php build.php # This file reads a few json files and then creates a set of html files in the doc folder
         cd ../
