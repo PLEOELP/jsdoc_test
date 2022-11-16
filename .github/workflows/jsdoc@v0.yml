@@ -29,6 +29,19 @@ jobs:
         uses: andstor/jsdoc-action@v1.2.1
         with:
           source_dir: ./assets/scripts
-          # recurse: true
-          # output_dir: ./assets/doc
-
+          recurse: true
+          output_dir: ./assets/doc
+      
+      # Commit generated document into repository
+      - name: Commit
+        run: |
+          git config --local user.name "jsdoc_workflow"
+          git add ./assets/doc
+          git commit -m "Updating the Documentation"
+      
+      # Push the change
+      - name: Push
+        uses: ad-m/github-push-action@master
+          github_token:${{secrets.GITHUB_TOKEN}}
+          
+          
