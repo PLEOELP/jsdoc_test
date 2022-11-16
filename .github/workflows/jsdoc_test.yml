@@ -32,5 +32,5 @@ jobs:
 
       - uses: actions/download-artifact@v3
         with:
-          path: world.txt
+          name: world.txt
 
