@@ -24,6 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          repository: PLEOELP/cse110-fa22-group32
           ref: jsdoc_test
       
       # Runs a single command using the runners shell
